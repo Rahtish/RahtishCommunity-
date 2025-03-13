@@ -112,47 +112,6 @@ body::before {
   align-items: center;
   width: 100%;
 }
-/* Features Section */
-.features-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 15px;
-}
-
-.feature-card {
-  width: 98%;
-  max-width: 450px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  font-weight: 700;
-  text-align: center;
-  overflow: hidden;
-  background-image: url('https://i.ibb.co/FzvXRcN/20250107-224028.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.feature-text {
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif; /* Change font here */
-  font-weight: 900; /* Medium-bold for emphasis */
-  color: #000; /* Darker shade for better contrast */
-  text-transform: uppercase; /* Gives a bold, impactful look */
-  letter-spacing: 0.5px; /* Slight spacing for readability */
-}
-
-.features-heading {
-  font-size: 24px;
-  font-weight: 700;
-  text-align: center;
-  color: #d4af37;
-}
 
 /* Thin border */
 .thin-border {
@@ -163,23 +122,6 @@ body::before {
   box-shadow: 0 0 8px rgba(0, 81, 190, 0.5); /* Soft Neon Glow */
 }
 
-/* About Section */
-.about-cult {
-  text-align: center;
-  padding: 60px 20px;
-  background-color: #000;
-}
-
-.about-text {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-  line-height: 1.8;
-  color: #f1f1f1;
-  max-width: 900px;
-  margin: 0 auto;
-  font-weight: 400;
-  padding: 0 20px;
-}
 
 /* Video Section */
 .video-section {
@@ -197,389 +139,27 @@ body::before {
 }
 
 .video-container {
-  position: relative;
-  width: 95%;
-  max-width: 960px;
-  border: 2px solid #0051be; /* Thin Neon Blue Border */
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 81, 190, 0.4); /* Subtle Neon Glow */
+    position: relative;
+    width: 95%;
+    max-width: 960px;
+    border: 2px solid #0051be; /* Thin Neon Blue Border */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 81, 190, 0.4); /* Subtle Neon Glow */
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
 }
 
 .course-video {
-  width: 100%;
-  height: 210px;
-  display: block;
+    width: 100%;
+    height: 100%; /* Ensures it fills the container */
+    display: block;
 }
 
 
 
-.btn1 {
-  background-color: #ff0000;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(45deg, #ffffff, #d4af37);
-  padding: 14px 37px;
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 8px;
-  border: 2px solid #d4af37;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
 
-.btn1:hover {
-  transform: translateY(-3px);
-  border: 2px solid #e60000;
-}
-
-/* Timer */
-#timer {
-  color: black;
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: 15px;
-  background: url("https://i.ibb.co/FzvXRcN/20250107-224028.jpg") no-repeat center center;
-  background-size: cover;
-  padding: 5px 15px;
-  border-radius: 8px;
-  display: inline-block;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: fit-content;
-}
-/* Desktop-friendly media queries with requested changes */
-@media (min-width: 768px) {
-  /* Header */
-  .header-container {
-    padding: 10px 40px;
-    justify-content: space-between;
-  }
-
-  .logo {
-    max-height: 70px;
-  }
-
-  .btn {
-    font-size: 24px; /* Increased button size */
-    padding: 18px 36px;
-    border-width: 3px; /* Thicker border for prominence */
-  }
-
-  /* Hero Section */
-  .hero {
-    height: 90vh;
-  }
-
-  .course-photo {
-    width: 80%;
-    max-width: 1200px;
-    height: auto;
-  }
-
-  /* Features Section */
-  .features-container {
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .feature-card {
-    width: 30%;
-    height: 150px;
-    max-width: 400px;
-  }
-
-  .feature-text {
-    font-size: 18px;
-  }
-
-  .features-heading {
-    font-size: 32px;
-  }
-
-  /* Video Section */
-  .video-container {
-    width: 90%; /* Larger container width */
-    max-width: 1000px;
-  }
-
-  .course-video {
-    height: 500px; /* Larger height for better visibility */
-  }
-
-  .video-heading {
-    font-size: 36px;
-  }
-
-  /* Call to Action Section */
-  .cta-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 50px 40px;
-  }
-
-  .cta-text {
-    font-size: 32px;
-  }
-
-  .btn1 {
-    font-size: 24px; /* Increased button size */
-    padding: 20px 50px;
-    border-width: 3px; /* Thicker border */
-  }
-
-  #timer {
-    font-size: 28px;
-  }
-}
 /* Segment Styling */
-.segment {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin-bottom: -35px;
-}
 
-.segment-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #FFD700; /* Gold premium color */
-    margin-bottom: 10px;
-}
-
-.segment-subtitle {
-    font-size: 1.2rem;
-    color: #bbb;
-    margin-bottom: 40px;
-}
-
-/* Content Box Styling */
-.segment-content {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.segment-box {
-    background-color: #0f0f0f;
-    padding: 20px;
-    margin-top: -40px;
-    border-radius: 10px;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0 6px 12px rgba(255, 215, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.segment-box:hover {
-    transform: translateY(-5px);
-}
-
-.segment-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.segment-box h3 {
-    font-size: 1.7rem;
-    color: #FFD700;
-    margin-top: 15px;
-}
-
-.segment-box p {
-    font-size: 1.42rem;
-    color: #ddd;
-}
-
-/* Responsive Design */
-@media (max-width: 900px) {
-    .segment-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .segment-box {
-        max-width: 90%;
-    }
-}
-
-/* Section Styling */
-.fitness-section {
-    text-align: center;
-    padding: 40px 0;
-    margin-top: -30px;
-}
-
-/* Center the Slider */
-.slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-top: 20px;
-}
-
-/* Slider Box */
-.slider {
-    width: 350px;  /* 3:4 Aspect Ratio */
-    height: 450px;
-    outline: 1px solid #ffb200;
-    overflow: hidden;
-    position: relative;
-    border-radius: 10px; /* Smooth edges */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Slides */
-.slide {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Active Slide */
-.slide.active {
-    opacity: 1;
-}
-
-.slider-container1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-top: 20px;
-}
-
-/* Slider Box */
-.slider1 {
-    width: 350px;  /* 3:4 Aspect Ratio */
-    height: 196px;
-    outline: 1px solid #ffb200;
-    overflow: hidden;
-    position: relative;
-    border-radius: 10px; /* Smooth edges */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Slides */
-.slide1 {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide1 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Active Slide */
-.slide1.active {
-    opacity: 1;
-}
-
-.features-headingg {
-    font-size: 39px; /* Increased size for more impact */
-    font-weight: 900;
-    text-align: center;
-   margin-top: -10px;
-   
-  margin-top: -40px;
-  margin-bottom: -10px;
-}   
-.features-headinggg {
-  font-size: 30px;
-  font-weight: 700;
-  text-align: center;
-  margin-top: -10px;
-  color: #e7be3a;
-  margin-bottom: -10px;
-}
-.description p {
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    color: #f4f4f4; /* Light color for readability */
-    font-size: 26px;
-    line-height: 1.6;
-    max-width: 1000px; /* Increased width */
-    margin: 0 auto;
-    position: relative;
-    transition: transform 0.3s, color 0.3s;
-    text-shadow: 2px 2px 6px rgba(212, 175, 55, 0.8); /* Golden glow */
-    text-align: justify;
-}
-
-.description p:hover {
-    transform: scale(1.03);
-    color: #d4af37; /* Golden hover */
-}
-
-.description p::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    height: 3px;
-    background: linear-gradient(to right, #d4af37, #e60000); /* Gold to red */
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.description p:hover::after {
-    transform: scaleX(1);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .description p {
-        max-width: 90%;
-        font-size: 24px;
-    }
-.hellohe {
-    border: none;
-    height: 2px;    
-    width: 300px;
-    background: linear-gradient(90deg, 
-        gold 15%, 
-        red 20%, orange 30%, yellow 40%, 
-        green 50%, blue 60%, indigo 70%, violet 85%, 
-        gold 100%);
-}
-.fitness-heading {
-    font-size: 32px; /* Large and bold */
-    font-weight: 900;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 4px;
-    color: white;   
-    
-    
-    padding: 10px 0;
-    margin: 0px 0; /* Adds spacing */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Smooth shadow */
-}
-/* Apply animation only to elements after "WATCH NOW!" */
 .features-heading,
 .features-container,
 .fitness-heading,
@@ -604,59 +184,7 @@ footer {
     color: gray;
 }
 /* Adjustments for Laptop Screens (1024px - 1440px) */
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-    .header-container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
 
-    .logo {
-        max-height: 70px; /* Make the logo a bit bigger */
-    }
-
-    .btn {
-        font-size: 20px;
-        padding: 14px 28px;
-    }
-
-    .video-container {
-        max-width: 1200px;
-    }
-
-    .course-video {
-        height: 400px; /* Larger video for laptop screens */
-    }
-
-    .features-container {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-    }
-
-    .feature-card {
-        width: 30%; /* Make cards more compact */
-        height: 100px;
-    }
-
-    .slider-container, .slider-container1 {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
-    .slide img, .slide1 img {
-        width: 100%;
-        max-height: 450px;
-    }
-
-    .cta-section {
-        padding: 60px;
-    }
-
-    .btn1 {
-        font-size: 22px;
-        padding: 16px 32px;
-    }
-}
 
 
 /* Perks Section */
@@ -665,10 +193,11 @@ footer {
     font-size: 28px;
     font-weight: 700;
     text-align: center;
-    color: #0051be; /* Neon Blue - Matches Theme */
-    margin-bottom: 20px;
+    color: #0051be;
+    margin: 20px auto;
+    display: block;
+    max-width: fit-content;
 }
-
 /* Perks Container */
 /* Perks Container */
 /* Perks Container */
@@ -676,10 +205,10 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px; /* Adds consistent spacing between boxes */
+    gap: 25px;
     padding: 20px;
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto; /* Ensures it's centered */
 }
 
 /* Individual Perk (Same Width for All) */
@@ -687,16 +216,15 @@ footer {
     display: flex;
     align-items: center;
     gap: 15px;
-    background-color: #0d1321; /* Dark Blue */
+    background-color: #0d1321;
     padding: 15px 20px;
     border-radius: 8px;
-    border: 1px solid black; /* Thin Black Border */
-    box-shadow: 0 0 10px rgba(0, 81, 190, 0.5); /* Subtle Neon Glow */
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 81, 190, 0.5);
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    opacity: 0;
-    transform: translateY(30px); /* Start slightly lower */
-    width: 100%; 
-    max-width: 600px; /* Ensures uniform width */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* Centers each perk */
 }
 
 /* Uplift Animation */
@@ -757,5 +285,14 @@ footer {
 
     .perk-content h3 {
         text-align: center;
+    }
+}
+@media (min-width: 1024px) {
+    .perks-container {
+        max-width: 900px;
+    }
+
+    .perk {
+        max-width: 700px;
     }
 }
