@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Rahtish's Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+  <div class="header-container">
+<a href="https://youtube.com/@ratish420?feature=shared">
+  <img src="https://i.ibb.co/h111Xd2Q/20250313-213708.png" alt="Logo" class="logo">
+</a>
+    <a href="payment.html" class="btn">Join Now</a>
+  </div>
+</header>
+  <!-- Hero Section -->
+  <section class="video-section">
+  <br>
+  <div class="video-container">
+    <iframe class="course-video" src="https://www.youtube.com/embed/GnBfh9-x77U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</section>
+ 
+  
+  <hr class="thin-border">
+<h2 class="perks-heading">WHY JOIN US?</h2>
+<hr class="thin-border">
+
+<!-- Perks Timeline -->
+<div class="perks-container">
+    <div class="perk">
+        <div class="perk-icon">📞</div>
+        <div class="perk-content">
+            <h3>Private 1-on-1 Strategy Calls</h3>
+        </div>
+    </div>
+
+    <div class="perk">
+        <div class="perk-icon">📩</div>
+        <div class="perk-content">
+            <h3>1-on-1 DM Access for Instant Support</h3>
+        </div>
+    </div>
+
+    <div class="perk">
+        <div class="perk-icon">🎓</div>
+        <div class="perk-content">
+            <h3>Members-Only Advanced Courses</h3>
+        </div>
+    </div>
+</div>
+<!-- Thin Border after Feature Cards -->
+<hr class="thin-border">
+<!-- Video Section -->
+<center>
+
+<hr class="thin-border">
+</center>
+<footer style="text-align: center; font-size: 10px; color: gray; padding: 10px;">
+<hr style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.2); margin: 10px auto; width: 100%;">   
+<a href="https://theayushthakur7.github.io/My_Portfolio/" target="_blank" style="color: gray; text-decoration: none;"> Made By Ayush Thakur (Click To See)</a>
+</footer>
+<script>
+   // Auto-slide for slider sections
+   document.querySelectorAll(".slider, .slider1").forEach((slider) => {
+       let slides = slider.querySelectorAll(".slide, .slide1");
+       let index = 0;
+
+       function showSlide() {
+           slides.forEach((slide) => slide.classList.remove("active"));
+           slides[index].classList.add("active");
+           index = (index + 1) % slides.length;
+       }
+
+       setInterval(showSlide, 3000);
+       showSlide();
+   });
+
+   // Reveal animation for perks and other elements
+   const hiddenElements = document.querySelectorAll(
+       '.features-heading, .features-container, .segment, .fitness-heading, .hellohe, .slider-container, .slider-container1, .cta-section, footer, .perk'
+   );
+
+   const observer = new IntersectionObserver(entries => {
+       entries.forEach(entry => {
+           if (entry.isIntersecting) {
+               entry.target.classList.add('show');
+           }
+       });
+   }, { threshold: 0.3 });
+
+   hiddenElements.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
