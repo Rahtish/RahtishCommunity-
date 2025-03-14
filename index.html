@@ -55,8 +55,42 @@
 <hr class="thin-border">
 <!-- Video Section -->
 </center>
+<!-- Testimonials Section -->
+<center>
+  <hr class="thin-border">
+  <h2 class="testimonials-heading">What People Say</h2>
+  <hr class="thin-border">
+</center>
 
+<!-- Chat Testimonials (Now Comes First) -->
+<div class="chat-testimonials">
+    <img src="1.jpg" alt="Chat Testimonial 1" class="chat-screenshot">
+    <img src="2.jpg" alt="Chat Testimonial 2" class="chat-screenshot">
+    <img src="3.jpg" alt="Chat Testimonial 3" class="chat-screenshot">
+</div>
+
+<!-- Text Testimonials -->
+<div class="testimonials-container">
+    <!-- Testimonial 1 -->
+    <div class="testimonial text-testimonial">
+        <p>The call was great bro, understood things properly and the way to go about it. Really informative and practical. We’ll definitely stay in touch and connect every few weeks. 🙏🏻🙏🏻</p>
+        <h4>Vansh </h4>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial text-testimonial">
+        <p>And I understood each and every thing the solutions were very practical both for future and present. Be ready I’ll book another one call in some time 30 minutes wasn’t enough for me I’ll do it till I’m bankrupt 😂</p>
+        <h4>Nikit Dev Singh</h4>
+    </div>
+</div>
 <hr class="thin-border">
+<!-- Call-to-Action Section -->
+<div class="cta-section">
+    <h2>Ready to Level Up?</h2>
+    <p>Join now and get access to private 1-on-1 calls, direct DM support, exclusive courses, members-only videos, twice-a-month Q&As, and growth challenges—all designed to push you ahead.</p>
+    
+    <a href="payment.html" class="btn1">Join Now</a>
+</div>
 </center>
 <footer style="text-align: center; font-size: 10px; color: gray; padding: 10px;">
 <hr style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.2); margin: 10px auto; width: 100%;">   
@@ -92,6 +126,19 @@
    }, { threshold: 0.3 });
 
    hiddenElements.forEach(el => observer.observe(el));
+   
+   // Reveal animation for testimonials
+const testimonialElements = document.querySelectorAll('.testimonial, .chat-screenshot');
+
+const testimonialObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, { threshold: 0.3 });
+
+testimonialElements.forEach(el => testimonialObserver.observe(el));
 </script>
 </body>
 </html>

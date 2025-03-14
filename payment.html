@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Payment Page Rahtish</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Remove any extra spacing */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0f1f; /* Dark Blue */
+    font-family: 'Montserrat', sans-serif;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+/* Sticky Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    background: #0a0f1f; /* Deep Dark Blue */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #0051be;
+    box-shadow: 0 0 10px rgba(0, 81, 190, 0.5);
+    z-index: 1000;
+}
+
+/* Prevent content from overlapping with navbar */
+body {
+    padding-top: 60px; /* Adjust to match header height */
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+        .logo {
+            max-height: 50px;
+            display: inline-block;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #0051be;
+            color: white;
+            background: transparent;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 81, 190, 0.7);
+        }
+
+        .btn:hover {
+            background: #0051be;
+            color: #0a0f1f;
+            box-shadow: 0 0 15px rgba(0, 81, 190, 1);
+        }
+
+        /* Adjust spacing to prevent overlap */
+        body {
+            padding-top: 80px;
+        }
+
+        .payment-section {
+            background-color: #0d1321; /* Dark navy blue */
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 0 20px rgba(0, 81, 190, 0.5);
+        }
+
+        h2 {
+            color: #ff4c4c;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .qr-container {
+            margin: 20px 0;
+        }
+
+        .qr-code {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 81, 190, 0.6);
+        }
+
+        .payment-instructions {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 20px 0;
+            color: #bbb;
+        }
+
+        .btn1 {
+            background-color: transparent;
+            color: white;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #0051be;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 15px rgba(0, 81, 190, 0.7);
+        }
+
+        .btn1:hover {
+            background: #0051be;
+            color: #0a0f1f;
+            box-shadow: 0 0 20px rgba(0, 81, 190, 1);
+        }
+
+        .terms {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(13, 19, 33, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 81, 190, 0.8);
+        }
+
+        .terms h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #ff4c4c;
+        }
+
+        .terms p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #bbb;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: gray;
+            padding: 15px;
+            margin-top: 20px;
+            background: #0a0f1f;
+        }
+
+        footer a {
+            color: gray;
+            text-decoration: none;
+        }
+/* Media Query: Apply 100% width on screens 1024px and larger */
+@media (min-width: 1024px) {
+    .header {
+        width: 97%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+  <div class="header-container">
+<a href="https://youtube.com/@ratish420?feature=shared">
+  <img src="https://i.ibb.co/h111Xd2Q/20250313-213708.png" alt="Logo" class="logo">
+</a>
+    <a href="index.html" class="btn">Back</a>
+  </div>
+</header>
+
+    <section class="payment-section">
+    <h2>Enroll Now - Pay ₹1000</h2>
+    <div class="qr-container">
+        <img src="" alt="QR Code for Payment" class="qr-code">
+    </div>
+    <p class="payment-instructions">
+        This is a one-time enrollment payment of ₹1000 to activate your subscription.
+        <br>Future payments will be charged from the server.  
+        <br>Scan the QR code or click "Enroll Now" to proceed.
+    </p>
+    <a href="" class="btn1">Enroll Now</a>
+    <div class="terms">
+        <h3>WARNING</h3>
+        <p>1. Pay exactly ₹1000. If you pay less, the transaction will fail, and you may lose your money.</p>
+        <p>2. Only click the "Enroll Now" button if you have a payment app on your device.  
+           If paying from another device, please scan the QR code.</p>
+    </div>
+</section>
+
+    <footer>
+        <hr style="border: none; border-top: 1px solid rgba(255, 255, 255, 0.2); margin: 10px auto; width: 100%;">   
+        <a href="https://theayushthakur7.github.io/My_Portfolio/" target="_blank">Made By Ayush Thakur (Click To See)</a>
+    </footer>
+</body>
+</html>
