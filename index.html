@@ -58,7 +58,7 @@
 <!-- Testimonials Section -->
 <center>
   <hr class="thin-border">
-  <h2 class="testimonials-heading">What People Say</h2>
+  <h2 class="testimonials-heading">OUR STUDENTS</h2>
   <hr class="thin-border">
 </center>
 
@@ -68,7 +68,10 @@
     <img src="2.jpg" alt="Chat Testimonial 2" class="chat-screenshot">
     <img src="3.jpg" alt="Chat Testimonial 3" class="chat-screenshot">
 </div>
-
+<div class="slider-container">
+    <img src="before.jpg" class="active" id="image2">
+    <img src="after.jpg" id="image1">
+</div>
 <!-- Text Testimonials -->
 <div class="testimonials-container">
     <!-- Testimonial 1 -->
@@ -79,7 +82,7 @@
 
     <!-- Testimonial 2 -->
     <div class="testimonial text-testimonial">
-        <p>And I understood each and every thing the solutions were very practical both for future and present. Be ready I’ll book another one call in some time 30 minutes wasn’t enough for me I’ll do it till I’m bankrupt 😂</p>
+        <p>And I understood each and every thing the solutions were very practical both for future and present. Be ready I’ll book another one call in some time 30 minutes wasn’t enough for me.</p>
         <h4>Nikit Dev Singh</h4>
     </div>
 </div>
@@ -139,6 +142,14 @@ const testimonialObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 
 testimonialElements.forEach(el => testimonialObserver.observe(el));
+let images = document.querySelectorAll(".slider-container img");
+    let index = 0;
+
+    setInterval(() => {
+        images[index].classList.remove("active");
+        index = (index + 1) % images.length;
+        images[index].classList.add("active");
+    }, 3000);
 </script>
 </body>
 </html>
