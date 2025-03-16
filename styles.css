@@ -189,111 +189,109 @@ footer {
 
 /* Perks Section */
 /* Perks Heading */
+/* Perks Heading - Centered & Styled */
 .perks-heading {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 800;
     text-align: center;
-    color: #0051be;
-    margin: 20px auto;
+    color: #00aaff; /* Lighter blue for a premium feel */
+    margin: 30px auto;
     display: block;
     max-width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-/* Perks Container */
-/* Perks Container */
-/* Perks Container */
+
+/* Perks Container - Modern Grid Layout */
 .perks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible Grid */
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Individual Perk - Now More Premium */
+.perk {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto; /* Ensures it's centered */
-}
-
-/* Individual Perk (Same Width for All) */
-.perk {
-    display: flex;
-    align-items: center;
-    gap: 15px;
     background-color: #0d1321;
-    padding: 15px 20px;
-    border-radius: 8px;
-    border: 1px solid black;
-    box-shadow: 0 0 10px rgba(0, 81, 190, 0.5);
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto; /* Centers each perk */
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #0051be;
+    box-shadow: 0 0 15px rgba(0, 81, 190, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 400px;
+    margin: auto;
 }
 
-/* Uplift Animation */
-.perk.show {
-    opacity: 1;
-    transform: translateY(0); /* Moves up smoothly */
-    box-shadow: 0 0 15px rgba(0, 81, 190, 0.7); /* Enhances glow on reveal */
-}
-
-/* Hover Effect */
+/* Hover Effect - Subtle Lift */
 .perk:hover {
-    transform: translateY(-5px); /* Small uplift on hover */
-    box-shadow: 0 0 20px rgba(0, 81, 190, 0.9); /* Stronger glow */
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 81, 190, 0.9);
 }
 
-/* Icon Styling */
+/* Icon Styling - Bigger & Bolder */
 .perk-icon {
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
-    background-color: #0051be; /* Neon Blue */
+    font-size: 28px;
+    width: 65px;
+    height: 65px;
+    background: #0051be;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
-/* Perk Content */
+/* Perk Title */
 .perk-content h3 {
-    font-size: 20px;
-    color: #f4f4f4; /* Light Text for Contrast */
-    margin: 0;
-    text-align: left;
-    width: 100%;
+    font-size: 22px;
+    color: #f4f4f4;
+    margin-bottom: 8px;
 }
 
-/* Responsive Design */
+/* Perk Description */
+.perk-content p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+/* Responsive - Mobile Adjustments */
 @media (max-width: 768px) {
     .perks-container {
-        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .perk {
         width: 90%;
-        max-width: none;
-        flex-direction: column;
+        max-width: 100%;
         text-align: center;
-        padding: 15px;
     }
 
     .perk-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 22px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
     }
 
     .perk-content h3 {
-        text-align: center;
-    }
-}
-@media (min-width: 1024px) {
-    .perks-container {
-        max-width: 900px;
+        font-size: 20px;
     }
 
-    .perk {
-        max-width: 700px;
+    .perk-content p {
+        font-size: 14px;
     }
 }
 /* Testimonials Section */
@@ -479,6 +477,130 @@ footer {
         transition: opacity 1s ease-in-out;
     }
 
-    .slider-container img.active {
+/* Community Heading Style */
+.community-heading {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: -24px;
+    color: white;
+}
+
+/* Highlighted Text in Heading */
+.community-heading .highlight {
+    color: #00aaff; /* Light Blue (Adjust if needed) */
+    font-weight: bold;
+}
+
+/* Video Section */
+.video-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 95%;
+    max-width: 960px;
+    border: 2px solid #0051be; /* Thin Neon Blue Border */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 81, 190, 0.4); /* Subtle Neon Glow */
+    aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+}
+
+/* Course Video */
+.course-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+}   .slider-container img.active {
         opacity: 1;
     }
+    
+    
+
+/* Section Heading */
+/* Section Heading */
+.provide-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: #00aaff; /* Neon blue */
+    margin: 30px auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Provide Item Container */
+.provide-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Image Styling - 16:9 Aspect Ratio */
+.provide-item img {
+    width: 97%;
+    max-width: 960px; /* Ensures max width */
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer; /* Indicates it's interactive */
+
+    filter: none !important; /* Removes any color filter */
+    mix-blend-mode: normal !important; /* Ensures no blending mode changes color */
+    background: none !important; /* Removes any forced background */
+}
+/* Hover Effect */
+.provide-item img:hover {
+    transform: scale(1.03);
+}
+
+/* Click (Active) Effect */
+.provide-item img:active {
+    transform: scale(1.08) translateY(-5px); /* Lifts up slightly */
+    box-shadow: 0 0 25px rgba(0, 81, 190, 0.8); /* Stronger glow */
+}
+
+/* Description Text */
+.provide-item p {
+    font-size: 18px;
+    color: #d9f1ff; /* Light blue text */
+    max-width: 800px;
+    line-height: 1.6;
+    padding: 0 15px;
+    text-shadow: 2px 2px 4px rgba(0, 183, 255, 0.8); /* Soft glow */
+    position: relative;
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Hover Effect */
+.provide-item p:hover {
+    transform: scale(1.05);
+    color: #00aaff; /* Brighter neon blue */
+}
+
+/* Underline Line Animation */
+.provide-item p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background: #00aaff; /* Neon blue underline */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.provide-item p:hover::after {
+    transform: scaleX(1);
+}
